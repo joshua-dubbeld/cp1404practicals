@@ -31,4 +31,5 @@ def generate_random_number():
     number = random.randint(0, 100)
     return number
 
+
 main()
