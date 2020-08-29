@@ -20,8 +20,8 @@ def get_data():
         parts = line.split(',')  # Separate the data into its parts
         parts[2] = int(parts[2])  # Make the number an integer (ignore PyCharm's warning)
         data.append(parts)
-    return data
     input_file.close()
+    return data
 
 
 def display_subject_details(data):
