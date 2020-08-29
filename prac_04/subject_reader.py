@@ -35,5 +35,4 @@ def display_subject_details(data):
                                                                    subject_number_of_students))
 
 
-
 main()
