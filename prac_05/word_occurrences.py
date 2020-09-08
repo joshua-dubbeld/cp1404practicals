@@ -20,5 +20,5 @@ for word in word_list:
         largest_word_length = len(word)
 
 
-for word in words_dict:
+for word in sorted(words_dict):
     print("{:{}} : {}".format(word, largest_word_length, words_dict[word]))
