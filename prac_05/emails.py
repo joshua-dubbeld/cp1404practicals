@@ -19,4 +19,5 @@ while email != "":
 
     email = input("Email: ")
 
-print(emails_dict)
+for word in emails_dict:
+    print("{} ({})".format(emails_dict[word], word))
