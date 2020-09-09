@@ -11,11 +11,16 @@ while email != "":
     name_list = email_alias[0].split('.')
     name = ' '.join([word for word in name_list]).title()
     choice = input("Is your name {}? (Y/n) ".format(name))
+    while choice.lower() not in "yn":
+        print("Invalid choice.")
+        choice = input("Is your name {}? (Y/n) ".format(name))
     if choice.lower() == 'y':
         emails_dict[email] = name
-    else:
+    elif choice.lower() == 'n':
         name = input("Name: ").title()
         emails_dict[email] = name
+    else:
+        print("Something went wrong...")
 
     email = input("Email: ")
 

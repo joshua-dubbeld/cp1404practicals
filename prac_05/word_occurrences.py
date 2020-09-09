@@ -7,10 +7,10 @@ words_dict = {}
 
 largest_word_length = 0
 
-words = input("Text: ")
-word_list = words.split()
+text = input("Text: ")
+words = text.split()
 
-for word in word_list:
+for word in words:
     if word in words_dict:
         words_dict[word] += 1
     else:
