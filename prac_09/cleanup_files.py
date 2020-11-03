@@ -18,10 +18,9 @@ def main():
         if os.path.isdir(filename):
             continue
 
-        filename.replace(" ", "_").replace(".TXT", ".txt")
         new_name = get_fixed_filename(filename)
-        # if filename == new_name:
-        #     continue
+        if filename == new_name:
+            continue
         print("Renaming {} to {}".format(filename, new_name))
         os.rename(filename, new_name)
 
@@ -34,7 +33,7 @@ def get_fixed_filename(filename):
         try:
             if filename[i] == ' ':
                 new_character = '_'
-            elif filename[i - 1] == '_':
+            elif new_name[-1] == '_':
                 new_character = character.upper()
             elif character == '_':
                 new_character = character
